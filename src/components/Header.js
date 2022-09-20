@@ -40,6 +40,7 @@ const Header = () => {
 
   const onClickSend = async (obj) => {
     const { data } = await axios.post('https://apiairpods.herokuapp.com/api/orders', obj)
+    alert("Ваша заявка отправленна")
     setOpen(false);
   }
 
@@ -66,8 +67,8 @@ const Header = () => {
               <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Заполните форму ниже</DialogTitle>
                 <DialogContent>
-
                   <DialogContentText>
+                    Вам перезвонят в течение 5 минут
 
                   </DialogContentText>
                   <FormControl>
