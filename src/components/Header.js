@@ -39,7 +39,7 @@ const Header = () => {
   }
 
   const onClickSend = async (obj) => {
-    const { data } = await axios.post('https://apiairpods.herokuapp.com/api/orders', obj)
+    const { data } = await axios.post('http://81.200.119.215:5000/api/orders', obj)
     alert("Ваша заявка отправленна")
     setOpen(false);
   }
