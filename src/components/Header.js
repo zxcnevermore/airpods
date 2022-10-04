@@ -8,7 +8,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-
 import FormControl from '@mui/material/FormControl';
 
 
@@ -39,10 +38,12 @@ const Header = () => {
   }
 
   const onClickSend = async (obj) => {
-    const { data } = await axios.post('http://81.200.119.215:5000/api/orders', obj)
+    await axios.post("https://airpodsapi.herokuapp.com/api/orders", obj)
     alert("Ваша заявка отправленна")
     setOpen(false);
   }
+
+
 
   return (
     <>
